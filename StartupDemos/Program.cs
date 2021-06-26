@@ -20,7 +20,7 @@ namespace StartupDemos
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    //webBuilder.UseSetting(HostDefaults.ApplicationKey, "StartupDemos");
+                    webBuilder.UseSetting(WebHostDefaults.HostingStartupAssembliesKey, "HostingStartupExternalLibrary");
                     webBuilder.UseStartup<Startup>();
                 });
     }
